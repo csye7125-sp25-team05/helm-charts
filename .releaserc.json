@@ -1,0 +1,22 @@
+{
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["charts/go-app/Chart.yaml", "CHANGELOG.md"],
+          "message": "chore(release): update Chart.yaml to version ${nextRelease.version} [skip ci]"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "charts/go-app-*.tgz"
+        }
+      ]
+    ]
+  }
+  
