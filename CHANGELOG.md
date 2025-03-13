@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.1.0...v1.2.0) (2025-03-13)
+
+
+### Bug Fixes
+
+* Changing the file structure of the repository and updating the file path in .releaserc ([9b84555](https://github.com/csye7125-sp25-team05/helm-charts/commit/9b84555e52abcec4dbf470c6cd30a92773fad7cc))
+
+
+### Features
+
+* Update README.md ([f001998](https://github.com/csye7125-sp25-team05/helm-charts/commit/f001998b910fb89acf38222a16d36f83e6a9512d))
+
 # [1.1.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.0.1...v1.1.0) (2025-03-13)
 
 
