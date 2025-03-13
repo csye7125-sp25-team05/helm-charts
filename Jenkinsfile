@@ -11,6 +11,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'github-pat', usernameVariable: 'GITHUB_USERNAME', passwordVariable: 'GITHUB_TOKEN')]) {
                     script {
+                        sh "npm install semantic-release-helm"
                         sh "npx semantic-release"
                     }
                 }
