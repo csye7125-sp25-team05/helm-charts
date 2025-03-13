@@ -8,14 +8,14 @@
     [
       "semantic-release-helm",
       {
-        "chartPath": "./helm-app",  
+        "chartPath": "./",  
         "onlyUpdateVersion": true
       }
     ],
     [
       "@semantic-release/git", {
         "assets": [
-          {"path": "./helm-app/Chart.yaml"},  
+          {"path": "./Chart.yaml"},  
           {"path": "./CHANGELOG.md"}
         ]
       }
