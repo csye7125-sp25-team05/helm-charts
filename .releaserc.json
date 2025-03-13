@@ -8,14 +8,14 @@
     [
       "semantic-release-helm",
       {
-        "chartPath": "./helm-app",  // Updated to point to the correct directory where Chart.yaml is located
+        "chartPath": "./helm-app",  
         "onlyUpdateVersion": true
       }
     ],
     [
       "@semantic-release/git", {
         "assets": [
-          {"path": "./helm-app/Charts.yaml"},  // Corrected path to Chart.yaml
+          {"path": "./helm-app/Charts.yaml"},  
           {"path": "./CHANGELOG.md"}
         ]
       }
