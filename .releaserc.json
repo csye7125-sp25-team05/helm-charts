@@ -1,22 +1,52 @@
 {
-    "branches": ["main"],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/git",
-        {
-          "assets": ["./helm-app/Charts.yaml", "CHANGELOG.md"],
-          "message": "chore(release): update Chart.yaml to version ${nextRelease.version} [skip ci]"
+  "branches": ["main"],
+  "repositoryUrl": "https://github.com/cyse7125-sp25-05/helm-charts.git",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "semantic-release-helm",
+      {
+        "chartPath": "./helm-app",  // Updated to point to the correct directory where Chart.yaml is located
+        "onlyUpdateVersion": true
+      }
+    ],
+    [
+      "@semantic-release/git", {
+        "assets": [
+          {"path": "./helm-app/Charts.yaml"},  // Corrected path to Chart.yaml
+          {"path": "./CHANGELOG.md"}
+        ]
+      }
+    ],
+    "@semantic-release/github"
+  ],
+  "release": {
+    "verifyConditions": {
+      "path": ["@semantic-release/changelog", "@semantic-release/github", "@semantic-release/git"]
+    },
+    "analyzeCommits": [
+      "@semantic-release/commit-analyzer"
+    ],
+    "generateNotes": [
+      "@semantic-release/release-notes-generator", {
+        "preset": "angular",
+        "writerOpts": {
+          "commitsSort": ["header"]
         }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": "charts/go-app-*.tgz"
-        }
-      ]
-    ]
+      }
+    ],
+    "prepare": [
+      "semantic-release-helm",
+      "@semantic-release/git",
+      {
+        "path": "@semantic-release/changelog",
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "publish": "@semantic-release/github",
+    "success": "@semantic-release/github",
+    "fail": "@semantic-release/github"
   }
-  
+}
