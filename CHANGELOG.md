@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.2.0...v1.2.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* added appVersion to the Chart ([09c967e](https://github.com/csye7125-sp25-team05/helm-charts/commit/09c967e32a1a7df78ffc8f4bdad1833e294b0dfa))
+
 # [1.2.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.1.0...v1.2.0) (2025-03-13)
 
 
