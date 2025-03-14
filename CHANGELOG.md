@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.2.1...v1.3.0) (2025-03-14)
+
+
+### Features
+
+* Added template file for the application and docker authentication ([45009f2](https://github.com/csye7125-sp25-team05/helm-charts/commit/45009f2be3dff9e7283d85f8f85c917df550740b))
+
 ## [1.2.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.2.0...v1.2.1) (2025-03-14)
 
 
