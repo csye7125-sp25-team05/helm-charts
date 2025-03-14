@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.3.0...v1.3.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* minor chnage in values.yaml like removing unwanted code ([72cb9a4](https://github.com/csye7125-sp25-team05/helm-charts/commit/72cb9a49f804e2b3f595fe6235c41fbeca0f20be))
+
 # [1.3.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.2.1...v1.3.0) (2025-03-14)
 
 
