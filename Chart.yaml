@@ -1,7 +1,7 @@
 apiVersion: v2
-name: go-app
+name: api-server
 version: 1.2.1
 description: A Helm chart for deploying a Go application
 type: application
 dependencies: []
-appVersion: ${nextRelease.version}
+
