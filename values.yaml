@@ -1,30 +1,42 @@
-replicaCount: 2
-
+dependency:
+    name: ENC[AES256_GCM,data:LV1+9G67nBCqiw==,iv:O5Zi8acPzEi3+XANVTjEsrbdqew6vmw9IDBvgVjqkr0=,tag:AT9gptfbnYt1z7tLw3lTEg==,type:str]
+replicaCount: ENC[AES256_GCM,data:yg==,iv:PsUCFtxW/p3O2nCJikc9yECfEJD7blMkyBTjwSR1gS0=,tag:b7GlW1f0ATxN8HIIyeo0PQ==,type:int]
 image:
-  repository: mayu007/api-server
-  tag: go-app-v1.0.1
-  pullPolicy: IfNotPresent
-
+    repository: ENC[AES256_GCM,data:iT0OJt/MxxL+HyxnJmCOKqqI,iv:zl/Ql0UgkyXcQLw54HyNw+gxGyBPxJgF/IrSjdw9JWY=,tag:SEWyTATAKhNjonHjtZEFOQ==,type:str]
+    tag: ENC[AES256_GCM,data:xyw=,iv:8xSG3YfZv6DqOYJobWvVYWrY9gJC17HBlynpeKbk/IM=,tag:+v3Nn+dcBHRdtGO3Gwihiw==,type:str]
+    pullPolicy: ENC[AES256_GCM,data:Qe3DbjjfZ3yY9K3L,iv:sdfYs9rKindHj+Yd7acalHE7Xduf+uZypmzekqCrV54=,tag:6v0ZdKSxoRLF0Sht4JciNA==,type:str]
 service:
-  type: ClusterIP
-  port: 8080
-
-ingress:
-  enabled: false
-  annotations: {}
-  hosts:
-    - host: go-app.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-
-resources:
-  limits:
-    cpu: 500m
-    memory: 512Mi
-  requests:
-    cpu: 250m
-    memory: 256Mi
-
-affinity: {}
+    name: ENC[AES256_GCM,data:NspPcBGfsBrBGg==,iv:8L0bZZjFVYarbIpc2F8gxa52CrZZXPMg3xCvkM7jPhE=,tag:0svyWc5lOfc03BX0Odo07g==,type:str]
+    port: ENC[AES256_GCM,data:Mcqojg==,iv:+xv3X4PR/f6o3IRfBszr7UUwzUtjkJ9/4XKsrNZfuyc=,tag:lhUWSp/kcPHQAZ38yED2bA==,type:int]
+env:
+    ENVIRONMENT: ENC[AES256_GCM,data:C7g2e5A=,iv:UEJ1R9LORUu0ZpcHoFr/Tu5TtShkIxSbG2T8CSN6EmA=,tag:wsFabOTuIAr+tK05w0+reA==,type:str]
+    BUCKET_NAME: ENC[AES256_GCM,data:gdl4OzIJizSc6tMC3Xa8lA==,iv:c17xuNuH+hULNe4Hhh067CyAffBb1eYlFFYDA5Z6czc=,tag:y1ioPq2wTKc4F5pff3PtyQ==,type:str]
+    PROJECT_ID: ENC[AES256_GCM,data:Lsr0JYvbSdx5mfz9HOkMFi9Ne5s=,iv:YjJRe96bV1XDMCwKftWDMA4esK8NIii7cFtJBmIhgEw=,tag:QEShnEQbvF4j0+dW69PY+A==,type:str]
+    GOOGLE_APPLICATION_CREDENTIALS: ENC[AES256_GCM,data:7wgFllFfK4C9W/6OMUjIowbkbadCmPGNoCPg/5treXjH/Gyx,iv:yTZV5QGgd5DantGpwTSTrlZgamV/W/b+DYzhJaWhYOA=,tag:3xrPCxzJzSYQuJ6gnsfFWg==,type:str]
+volumes:
+    - name: ENC[AES256_GCM,data:S53ZyPe0IqwX3NBrRbwI,iv:iVzopKn3KHIL+nHOUxe9zVn8Kc3IiuxYa9lW8fQnWpQ=,tag:YNIqnvzciJF1QTkbX1ie7g==,type:str]
+      secret:
+        secretName: ENC[AES256_GCM,data:U8rzurAmjoe0UPWraEtB,iv:PkNhKP2lh+eYZ0lrbooLlE35Mt3sBJOndSYr75sLxoQ=,tag:gjkdM1w2bzTW4RHpm6uWWQ==,type:str]
+imagePullSecrets:
+    - name: ENC[AES256_GCM,data:Hin+jAjLrIDm0ERPHGINz3TSnc8=,iv:rkzj9cx/wiEVGwEUogRI6D60rJFJedOIwKrUdbXhWC0=,tag:L7Fa9fAgyFIDP5pvq0h9gQ==,type:str]
+secrets:
+    gcpCredentials: ENC[AES256_GCM,data:eRMm2ZjNDVQgJ5SEEMuSM0BGVp6eYfB6AcpzZIBdgyQ2Gv1t0Vpn/Bci1/Gr4KYUqLXuC+i/uQKdiLwZqLAM7PJswqMB6fNM3uh5SARkV1q62yYrq4/s41XJ4elm1Ajygr+94JUN5dpEsrUMLGxulKrY3v0=,iv:6C8AlnqwH72mETzZdHzQiWLxhxZ87Ae1BHBPBhPmYfs=,tag:XCjKh9F/uL05oVjDCxGJNg==,type:str]
+docker:
+    username: ENC[AES256_GCM,data:uP6K4T9SLg==,iv:lKLN1q/fh3jhxwrw3d4BHNzoSulnOjb4ZSieKOwKffc=,tag:e92m7kO6us5eXexsdJAtVA==,type:str]
+    password: ENC[AES256_GCM,data:9h3luNyZoaBPro1h,iv:60zB8lo3/qfIkYmrxqmKVmvCjvhefmcSlKznC44v2N0=,tag:cMNO1xGpNfn942u1htZeEw==,type:str]
+    email: ENC[AES256_GCM,data:1I9oDmw80QTJYUOm+KNOyG+f0+f3BaW2,iv:dLFFiUMgpVtM+kuGmm2gEnha6Zyg+SxJUYp+AmPTxV4=,tag:rzM6dmHj50OT78Tb9H2vtg==,type:str]
+    auth: ENC[AES256_GCM,data:oWkv27qOzN6aFFvP+b6tcO4I7yf36ZJ/skoK3ZN3wKwShw5L0JxBS65JmiEu8cauHpkWoQ==,iv:tG3xz5IGIB2RgGYQFeX9NsJZeYGD5JXbNvAXPlzL8Jw=,tag:heTOUN6uy3QxQvjpvafg1w==,type:str]
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: projects/csye7125-project-dev/locations/us-east1/keyRings/sops-key-ring/cryptoKeys/new-sops-key
+          created_at: "2025-03-14T14:58:14Z"
+          enc: CiQABwpIa4noYpZRRW6zvtzJx+Dp5ZckW1sTz5YfPi7mBfAZymYSSQAiUtAPByNqyD2EnWhZXtp8O0dmo8bUe0d6KBzVVGxG96bEzsOJjgX7VpYE0nZVCUz4tXFif9Bd8pLAyiwWqPox3E4Jrx6IbNw=
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2025-03-14T14:58:15Z"
+    mac: ENC[AES256_GCM,data:CoC8eZokfHZdX/WuYSaK6pIYPjoKunUO+Kyw3UkG6Vc8VzjE8/L3t8ryBWKJ1k5ssXo4xged4m0jXjBrN0zIstbm16TzAseEiTh2bt/JYepJQEs3gwtUvw/7pZbxzmXgScPf+Gv0bF1Y9MJz2AVM4rSQdN6D3n7MJkY49ncTHyM=,iv:G8D3ihg3/whU/UYgPPCT1joRme1EYzTmAKGnYsjmd0o=,tag:6+48htuRKFPb+QNmQlGfGQ==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.8.1
