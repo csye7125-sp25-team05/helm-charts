@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.3.1...v1.4.0) (2025-03-15)
+
+
+### Features
+
+* encrypting values.yaml ([452f0b8](https://github.com/csye7125-sp25-team05/helm-charts/commit/452f0b859fab4eae8c822d5c6145bc0ad7240d36))
+* pushing all the necessary template files ([f0abbfb](https://github.com/csye7125-sp25-team05/helm-charts/commit/f0abbfb9c20ffb501ceb0859c988b6e1b5bdffe3))
+
 ## [1.3.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.3.0...v1.3.1) (2025-03-14)
 
 
