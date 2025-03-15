@@ -1,36 +1,66 @@
 dependency:
-    name: ENC[AES256_GCM,data:LBiRo7+UxubH2w==,iv:aqacCT9TLoodFeNE79A948cx8aAnafO4HAVFB0NwW68=,tag:Mn0dBZnxToiOPvwwiA6XmQ==,type:str]
-replicaCount: ENC[AES256_GCM,data:Gw==,iv:yE8wG/tv5XtuVcP5RUzbJT1aRA4+5qEX0qJOm9aQL0E=,tag:Yx6UOHvGiw9kjmNfPyHneQ==,type:int]
+    name: api-server
+replicaCount: 1
 image:
-    repository: ENC[AES256_GCM,data:nbzVFILpVC7Qo9IMccxY4Nvi,iv:7ptNInk3NSiK+STmXkb2irlq8fbBFWJG6of9orH55WI=,tag:oDS6h8P0IUWsCJFEOwl9zQ==,type:str]
-    tag: ENC[AES256_GCM,data:gxQ=,iv:9Qla5N2/2jnugQ7mTdRH2Vn2Jf8r0RjAcye9jrCLxzY=,tag:zObD5pSBQz1wG0QdK3qEpg==,type:str]
-    pullPolicy: ENC[AES256_GCM,data:3peZOtRK7GxKRLqB,iv:3j5kof/Wv4Mr71VeZbC/PdyNod/YiYW72Loe0+xrmO4=,tag:CbZ2tWnxaK4qiyLtgR887Q==,type:str]
+    repository: mayu007/api-server
+    tag: t2
+    pullPolicy: IfNotPresent
 service:
-    name: ENC[AES256_GCM,data:VgN33RnDNXoejw==,iv:ZJvHjPRhlJgnR+Np+AYgwxHHSjXfA1rRzy6uODFMVhQ=,tag:5X61NZxT+dAPB4nXBcmFpA==,type:str]
-    port: ENC[AES256_GCM,data:dCuNSg==,iv:eG+n0bHRbwTPsq8KfGPqcz6b7yxfo8HuyPb8mXwvAKs=,tag:EJYNtlnhMmrPTZ4UTM57ow==,type:int]
+    name: api-server
+    port: 8080
 env:
-    ENVIRONMENT: ENC[AES256_GCM,data:8r+Mv9Y=,iv:dKG+lhqtgrF1TWlzDrdfgqThwN7rpjWFrr0c/57/3Jw=,tag:qE+1UV7tyEFqYfeova7wRw==,type:str]
-    BUCKET_NAME: ENC[AES256_GCM,data:6z+9ME0YXn62b+OG6FEaeQ==,iv:SzG/FmY0FQN1WwYOsG5yqgzvK2113zd0OfWNZ8fYzug=,tag:2brhbo4QkNSfhhIxSM3D7w==,type:str]
-    PROJECT_ID: ENC[AES256_GCM,data:bFpkRFV9PSjAFUpr3cWkF1wdMVk=,iv:NNS48+ec65cvIxhMBibsImgxbgIMMQjQpZiv5izTcG4=,tag:sKQkcRxEh6l4KEtSdGR19g==,type:str]
-    GOOGLE_APPLICATION_CREDENTIALS: ENC[AES256_GCM,data:3SAbVngnYWDE2P60+Iw8AeERcT04GhEtb11VwR9xEVnDMjin,iv:BlytZgkJS4e0JFwcw+NbOLEpldLKBOJltiWY2+UCOtU=,tag:eABy35KuaH5Apr3Vt9bSOw==,type:str]
+    ENVIRONMENT: local
+    BUCKET_NAME: csye7125-sp25-05
+    PROJECT_ID: csye7125-project-dev
+    GOOGLE_APPLICATION_CREDENTIALS: /var/secrets/google/credentials.json
 secrets:
-    gcpCredentials: ENC[AES256_GCM,data:XNwdwPl6vVS7E4OFLs0RVWPiqsDMZYgh5wtSSm/uNyJbU35dDxNtwfSuA/Js/Myybw2EvMvxuz7o6z/KAUhlriW+ggqP8MQ+YHyVkqrli9VyW2pyrieiCxqJcXWnjvY8JsuXaYDyCuf9vHMb01TvHD2vE+k=,iv:y24KHpHzGEzug2l8Q2GdL4z22lCESZOyF9ZrX5nHVrI=,tag:M1blEkSUBSGDPIyCPcoOcQ==,type:str]
+    gcpCredentials: L1VzZXJzL21heXVyZXNoLnNhdGFvQGdtYWlsLmNvbSIsImF1dGgiOiJiV0Y1ZFhKbElFd3lNVFkyTWpFM09ETTNNalk0T0RrNE1EY3dOelE9In19fQ==
 docker:
-    username: ENC[AES256_GCM,data:/yhtzO6FBA==,iv:fsu/FAQxNnb9pl/I5VXU1faEv59yfCSPHYcACfMnOcA=,tag:4UA7uHnxO7Pk7tuc82iaZw==,type:str]
-    password: ENC[AES256_GCM,data:8mvmWAM73ujGFzIK,iv:HBsken/QoY4dS1H8x2d/NEnraLmIYtswpvXzWnDadNk=,tag:tMnPFGowrvGNOyp03pVIng==,type:str]
-    email: ENC[AES256_GCM,data:FrVGdBV7hePWtEar2sAJPQBQifChXr/x,iv:YqXFl7yxuH3Qr8S7SO9MonUE2yQZqKz7VEueGH2zrPQ=,tag:ELybcNZz7f468reKbeP2IA==,type:str]
-    auth: ENC[AES256_GCM,data:BEq2kd5oeWkXPsptBIKiYhXT3InFHQgOWSMENnR6WeFzT99Rl4NcZXyYFuWExXKMeKzj4g==,iv:Thz8DBel++LG8fK7fs0K1PnAFNmccAwn3vaFwQYJIWQ=,tag:rc2LsBBwUrt++fEEXKo7aw==,type:str]
-sops:
-    kms: []
-    gcp_kms:
-        - resource_id: projects/csye7125-project-dev/locations/us-east1/keyRings/sops-key-ring/cryptoKeys/new-sops-key
-          created_at: "2025-03-14T17:45:05Z"
-          enc: CiQABwpIa7VJpmQy2wLYEass8PreF9bzgYgIhJA26dSf0k/zTzcSSQAiUtAPqoGgKVdhAk4wTSJ4Re9u5iTJx6WthMqgWb7jZAeuRc7mSBXzM1WckVXPP2QtDRLfjygF8+SMjEwcBEd/5lhHh5WvWI4=
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2025-03-14T17:45:06Z"
-    mac: ENC[AES256_GCM,data:WTXqQm1dofzik7xB77OylnzLuUazoOb5Eu9bqX3HTS4FitaJ5X1NgRR5q4aiIAkcP5Mh0d76Bhnv03or+9727/1JH9gAWCiGz3cS58bIKfnxSH6dwNtvOvrXXFINPcP0rQyunDa+5louo9KSkOgdruvn2JppQKjH+SLZblk6y/Y=,iv:XMBJovzDI76ur7YGlTzM00CWYh+zqDEy6DgA8bIwdPI=,tag:c4LadvsgUQTr4peJwxTBSA==,type:str]
-    pgp: []
-    unencrypted_suffix: _unencrypted
-    version: 3.8.1
+    username: mayu007
+    password: Mayuresh@123
+    email: mayuresh.satao@gmail.com
+    auth: bWF5dXJlc2guc2F0YW9AZ21haWwuY29tOk1heXVyZXNoQDEyMw==
+apiServer:
+  image: "mayu007/api-server:t3"
+  bucketName: "csye7125-sp25-05"
+  projectId: "csye7125-project-dev"
+  replicas: 1
+  flywayImage: "sataomayu/api:t1"
+  serviceAccountName: "api-server-sa"
+  namespace: "api-server"
+  automountToken: false
+
+postgres:
+  image: "postgres:17"
+  replicas: 1
+  storageClass: "standard"
+  storageSize: "1Gi"
+  serviceName: "postgres-service"
+
+dbsecrets:
+  POSTGRES_DB: "mydatabase"
+  POSTGRES_USER: "admin"
+  POSTGRES_PASSWORD: "mypassword"
+  DATABASE_URL: cG9zdGdyZXNxbDovL3dlYmFwcF91c2VyOk1heXVyZXNoQDEyM0Bwb3N0Z3Jlcy1zZXJ2aWNlOjU0MzIvd2ViYXBw
+
+postgres-service:
+  serviceName: "postgres"
+  port: 5432
+  targetPort: 5432
+  selectorLabel: "postgres"
+
+loadbalancer:
+  serviceName: "app-service"
+  serviceType: "LoadBalancer"
+  appLabel: "api-server"
+  servicePort: 80
+  targetPort: 8080
+
+webapp:
+  serviceName: "webapp-service"
+  namespace: "api-server"
+  serviceType: "NodePort"
+  servicePort: 80
+  targetPort: 80
+  nodePort: 30000
+  appLabel: "webapp"
