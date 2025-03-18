@@ -1,75 +1,65 @@
+appName: api-server
+namespace:
+    app: api-server
+    db: api-db
 dependency:
-    name: ENC[AES256_GCM,data:KKHyT8XbbBkLCw==,iv:7INo8cG52rwjNHsXHk3YnLAd+jteBiAzXtRQMYooGH8=,tag:CtJWMOaapDmMtHHrK4thaA==,type:str]
-replicaCount: ENC[AES256_GCM,data:WA==,iv:TKq/JfxFoWuV4QWWg4kXVLZVJgjXWdnzQ/oICbuOYDA=,tag:i3vS/XgIh3Bvv0Fj1LnhJg==,type:int]
+    name: api-server
+replicaCount: 1
 image:
-    repository: ENC[AES256_GCM,data://bpK9Zqoqu2sVyYkS43G2zJ,iv:WicCbxvrbNKIDKVkOH6wT6Y5w+pMRbadEQPa7M7wh9w=,tag:KKeJZoXEiXUZetAh4gd20w==,type:str]
-    tag: ENC[AES256_GCM,data:Vvk=,iv:NJ44mxbDB6xYFBhq83MMd7Qdc0cVkDxtua/UmdTmQhk=,tag:nQ20ehkprYef77+Jop0xdQ==,type:str]
-    pullPolicy: ENC[AES256_GCM,data:bP4r2PNbFR2fIV+2,iv:p0rrY0Bcsu3SREK/uF7kdgar++6m687Mg184i0Nl1pg=,tag:Owtx98swjyTjPM6MPdFlpA==,type:str]
+    repository: mayu007/api-server
+    tag: t2
+    pullPolicy: IfNotPresent
 service:
-    name: ENC[AES256_GCM,data:Ur3/WxQzxOXgcg==,iv:d8kScE6rxTbQVqcT5myJucAOyqcklIJ7HljrwSfT/Ws=,tag:Q6Ao2lYHf4e7uw9m1h7y9g==,type:str]
-    port: ENC[AES256_GCM,data:fJyYKw==,iv:AcFBb4T68nMY4an/rH4pDNnWiCBheYQogH+lrNQKrTc=,tag:kS4hwLQucbjFrKBQOlMdZA==,type:int]
+    name: api-server
+    port: 8080
 env:
-    ENVIRONMENT: ENC[AES256_GCM,data:pGZlsjs=,iv:+DICDiQssiutcopqShZpGAv5XdTff1YETzjZFUjnwm0=,tag:/f6bcTogASdKXFWRVIeSuA==,type:str]
-    BUCKET_NAME: ENC[AES256_GCM,data:oqP0VAO/4od9wsQKaDcYeg==,iv:mWsj/F5cIJUuBPtl478BfjoLhtrowbnQcpvhNMSCqgo=,tag:AmliAU0Rz0USNEdpzlakqg==,type:str]
-    PROJECT_ID: ENC[AES256_GCM,data:mHAtyzNGfCdTnvBe9VkGFUgKnZs=,iv:RbQOahEpxJzN66149w+HOUG6JYKyuwl8KCiC+KSjVds=,tag:qXfCuxuiIgcxCYsu2vI/1Q==,type:str]
-    GOOGLE_APPLICATION_CREDENTIALS: ENC[AES256_GCM,data:jWMbdLqK8YyBHd49mUK8/NnSDpIEwBOliWtg8ZtP8jEAbpmY,iv:9YtJ5Z+lmn9HHb8xo+yFwGrVN5nrcXjajrfn//MugHk=,tag:dfLDn/0CPhxdZv6bo1/jkg==,type:str]
+    ENVIRONMENT: local
+    BUCKET_NAME: csye7125-sp25-05
+    PROJECT_ID: csye7125-project-dev
+    GOOGLE_APPLICATION_CREDENTIALS: /var/secrets/google/credentials.json
 secrets:
-    gcpCredentials: ENC[AES256_GCM,data:Ao8MT2jgza16B5+We6z2wgtJjkhqnCZ+O4ks2C8YXdcqcyYXSB6bWJfM52TLBXbjvqC29cr8nwkhhTD991k4B7XKZi1B8TV7VaMcUAJpc85amNrfizRWILhAjF/GpjROBk5XwuUSjfRDCDrQDpYWjbvcgfc=,iv:Nw3Y3k2Rv41cAA9y/VXkcV0cl9Ai7aCUqmvvRvwIVXw=,tag:821nKgeJbERUX5B9vvzMbQ==,type:str]
+    gcpCredentials: L1VzZXJzL21heXVyZXNoLnNhdGFvQGdtYWlsLmNvbSIsImF1dGgiOiJiV0Y1ZFhKbElFd3lNVFkyTWpFM09ETTNNalk0T0RrNE1EY3dOelE9In19fQ==
 docker:
-    username: ENC[AES256_GCM,data:OUfZdSTdhw==,iv:L5WcbhS/UjptEZIF4FCl3CdTmqIHSfXjGkCk10VA+Fc=,tag:sLMrIRsdja6wlD8mcVyAFw==,type:str]
-    password: ENC[AES256_GCM,data:pOy3Fc8fD5PNT/q5,iv:diTMPAtYLnG0bErTPlvRCdbPHCHYfzCb4SxYadim28w=,tag:zwynspDJAC9W5pUghjJEGw==,type:str]
-    email: ENC[AES256_GCM,data:d8s8M3b9hQ7yliI1W7bPpod3g3m7YJKY,iv:Di5iFBdK7N5Cgf/GPuDjb8Rvjj5cEDYDqua2MwTp+x0=,tag:pE2XTCcLqODzDwIDP32eIQ==,type:str]
-    auth: ENC[AES256_GCM,data:Z+rI7ScmLvfQIoNsYzWR0vD2H8sCjUNBXKAMO/TC87iALqwmPhpBzVthxluJd/aKBozpiA==,iv:vkMM4yJNxBCy4rCVFluipmpvVo3EWJm+wZRgTgvFViI=,tag:f+2X5wj3Q5xVDrjJFnlTKw==,type:str]
+    username: mayu007
+    password: Mayuresh@123
+    email: mayuresh.satao@gmail.com
+    auth: bWF5dXJlc2guc2F0YW9AZ21haWwuY29tOk1heXVyZXNoQDEyMw==
 apiServer:
-    image: ENC[AES256_GCM,data:As2H8DvrK6MuZN+pGgBQHNcn0VTe,iv:LHlRbuVSDPc3K00eMrdzi1WtL2HzZc9JW3LZdeAhgn4=,tag:ZkT1iJywmCS1WFCE3EBnBA==,type:str]
-    bucketName: ENC[AES256_GCM,data:eoH6c/pGYwhze14Lb/jhbQ==,iv:bKl8BX34yN7w39xcQr6vKYeAY4aY/37d+tRTfUhpcxI=,tag:hjT5oG8iB0mqdRYxA96u4w==,type:str]
-    projectId: ENC[AES256_GCM,data:DnUx2sQWciCXRDGny4qRqNozalg=,iv:fH0DoCztjuioOeT2CAXyL2pASNVA6Pr1PqlcPzAYpy8=,tag:V14wol1W/pe69BjVyjtJRg==,type:str]
-    replicas: ENC[AES256_GCM,data:3Q==,iv:HvSlaw/IrpOzXrU+dPkk0XI9Ghh5Be8pEwq6y46GshU=,tag:m2nhlVTSzxE6YU3SsKQzjA==,type:int]
-    flywayImage: ENC[AES256_GCM,data:j9Uj16GfQ2K/p/0HNcRjRQ==,iv:NKfaKXm6G4IJo4AqAetBvyZCDbebUti5ec39cd5zGCQ=,tag:A+TQMrH7TLcseoXOiXe/5A==,type:str]
-    serviceAccountName: ENC[AES256_GCM,data:j/IjFhwmn/FnP7Cydw==,iv:3hR3c1QMDDM2CpDZLo+1dMZ1ogwm61TTh7dNBb0Mj+c=,tag:BnI/zp2OM+bWXF1IM8VEWA==,type:str]
-    namespace: ENC[AES256_GCM,data:QNiU+E6XZmX7vA==,iv:oxOO/DnVBJ6zc6f1j5IPnSonN0sjc+qgMtfUYu3PNjs=,tag:Me8BZV052xL1quTtzpExRw==,type:str]
-    automountToken: ENC[AES256_GCM,data:ZOk22zw=,iv:dbGV7FJRHcXeMCuv42Ubw1PbxWk6T2uVuuB/Eab2ilI=,tag:T5tpbQs/Ez0ULcyxAEdWmQ==,type:bool]
+    image: mayu007/api-server:t3
+    bucketName: csye7125-sp25-05
+    projectId: csye7125-project-dev
+    replicas: 1
+    flywayImage: sataomayu/api:t1
+    serviceAccountName: api-server-sa
+    namespace: api-server
+    automountToken: false
 postgres:
-    image: ENC[AES256_GCM,data:VYF7HDlmiJV47Ak=,iv:ipoHYK5yqxeFmvBGuFhklWhRWqaZ8/RhpXZuhwXKP/8=,tag:knTtbnIEMrHkK5hUjYIefA==,type:str]
-    replicas: ENC[AES256_GCM,data:tQ==,iv:8tGdVoqjpavVWfBhMfINsbSeM/kKkuTPYp9YB662L8s=,tag:yuR/C0MD86Nds+5BEs7QTA==,type:int]
-    storageClass: ENC[AES256_GCM,data:k6MWDWR/awM=,iv:Yg0AZyhNfmp8Q90XAdC+fOjymyLQQsCrLdvibVkI6ws=,tag:dF1IVbhr+1pNyO2ZTjRuUA==,type:str]
-    storageSize: ENC[AES256_GCM,data:HkjW,iv:duTKMDfi0VHarTJ2jW1uIKvKQHR/Af0MJB7g/1v7Dr0=,tag:yW9VxIykIwIx5TZesNuelg==,type:str]
-    serviceName: ENC[AES256_GCM,data:kK6d9Omy+MyWvEMzjCICqA==,iv:ye3mNj5SGui5GOvp4GzFGirUbkTmd5nnH1TU5eV4wcA=,tag:E+CgfRrKUjzCi9vzAcf7wA==,type:str]
+    image: postgres:17
+    replicas: 1
+    storageClass: standard
+    storageSize: 1Gi
+    serviceName: postgres-service
 dbsecrets:
-    POSTGRES_DB: ENC[AES256_GCM,data:orFnoZ1wOXo/Zw==,iv:hNQWGUlTv6I2Ddo9s1LSX+oZueuqQff/8R+r8i/hr5E=,tag:BqcT7hEyUjJqgezHOlQeOA==,type:str]
-    POSTGRES_USER: ENC[AES256_GCM,data:wUAMZ5w=,iv:8VomFxnooH6CGgUffmQR1N8UR97NOaQOZEohPwZDDx4=,tag:WkIkUCcI9bUgocHTcnBEWQ==,type:str]
-    POSTGRES_PASSWORD: ENC[AES256_GCM,data:P5E9SWLBJuQ7sw==,iv:8p+Y1xsf1LR/JasJpWsMsB93xLW5OpgaT9fT5O8I6WA=,tag:pEQsZO9qOl/7eK3dhRgEWg==,type:str]
-    DATABASE_URL: ENC[AES256_GCM,data:l+xS6Z17tzJIa4OQXOnrEowd1b6szCV+QXCdLLN709MicHo+XtmTSqQM7SXc1HnBBFFTp2Dlfi49eXkO6jRWCupELHdqkRQMh5wfbY5EvyvEio1Pb0ZWPQ==,iv:9s9S4KhJ9cpcH6P6ZWXGGXNV63qBOr8RuUG/UKGvPY8=,tag:LAiU5vy1DZlIG0fR6KEqOw==,type:str]
+    POSTGRES_DB: api-server
+    POSTGRES_USER: webapp_user
+    POSTGRES_PASSWORD: Mayuresh@123
+    DATABASE_URL: cG9zdGdyZXNxbDovL3dlYmFwcF91c2VyOk1heXVyZXNoQDEyM0Bwb3N0Z3Jlcy1zZXJ2aWNlOjU0MzIvYXBpLXNlcnZlcg==
 postgres-service:
-    serviceName: ENC[AES256_GCM,data:4TBAVJasyYU=,iv:lg2HuFSST8h4fTKFmDQPR2beaRAmVvUM5K+fat37ZKk=,tag:9EBkJhf0fusrBRJdFRw/bg==,type:str]
-    port: ENC[AES256_GCM,data:DSj27A==,iv:LC3+BzVbyxV56U7mfUE2cCxJ1RKAdFZn6S3FLlT7Szk=,tag:goRqaUADq7gVo6HXUn6ssQ==,type:int]
-    targetPort: ENC[AES256_GCM,data:BhRhgA==,iv:ebWoAnPNG345auM4Gi6eT8rJ+sJAdsspu+wIiQxfJJw=,tag:Ut5UE3H+5fQ5zVay6hLowA==,type:int]
-    selectorLabel: ENC[AES256_GCM,data:hWlHpCRNT8Q=,iv:wtnliGY8W+a0d6leOdbTFc8CCC2gfFFl+7cWIuRtyKI=,tag:5mmi6R5U34JZO+A+MiAi7w==,type:str]
+    serviceName: postgres
+    port: 5432
+    targetPort: 5432
+    selectorLabel: postgres
 loadbalancer:
-    serviceName: ENC[AES256_GCM,data:yR79lc+ImbCI37E=,iv:50yZ4Z0djE2SGe0xeF/gmhCDCS7rAdLKTerQlenwxh0=,tag:bKYiJ6nbdH1jr9Nk71Tjpw==,type:str]
-    serviceType: ENC[AES256_GCM,data:hD5eoLZWbkl2h2hn,iv:UMS17poqO+cN73kacLf4TJGywtNBlzXn4uYgjpmu3Fw=,tag:2PWFT9LMs4hP90acfVYmZQ==,type:str]
-    appLabel: ENC[AES256_GCM,data:SsXFEsSN948sjA==,iv:IjHw4T+aExxzdCtST15Ihku0+DFNxTLe9b7jkCzDYJw=,tag:uPYuy43BByiaxSORl7k9qQ==,type:str]
-    servicePort: ENC[AES256_GCM,data:6GY=,iv:A2OtyFsXIpwUA+wGARDhvd59OridvHHbtiHSNdMR6yc=,tag:jMIIOuHYS+qU3JDBbuDbKQ==,type:int]
-    targetPort: ENC[AES256_GCM,data:xcVz1w==,iv:xHQAkRwv6AZPsmoSwD2h44MjWAu4wu0xB76W5EGoEPY=,tag:nTK02LNYbLEchvrqVmXQQw==,type:int]
+    serviceName: app-service
+    serviceType: LoadBalancer
+    appLabel: api-server
+    servicePort: 80
+    targetPort: 8080
 webapp:
-    serviceName: ENC[AES256_GCM,data:y8NjFz2G/cUVlXrueJ4=,iv:yK9ymMCh35VsocNvjgV3RTLYgjNhyySWRdtXfrKyLkw=,tag:dYX3ITuTbbpA2jBJJxmOOQ==,type:str]
-    namespace: ENC[AES256_GCM,data:bVOVu2xRaTntQA==,iv:aPj1pzy0k5d7n6yfftfKyLVRATd7ftM7FZ2zI43CWeE=,tag:CZjZCpV61hkTrDTAoIKarw==,type:str]
-    serviceType: ENC[AES256_GCM,data:Z8j0CorXx/c=,iv:HJLTjFEjyeus75zMk0wenZp0VabgZFtUGV7/Hprc/V4=,tag:asB3SIRdogLiYBHYFsbHlg==,type:str]
-    servicePort: ENC[AES256_GCM,data:C8U=,iv:gYVh+euTdEFbxf8keT9WdpixSUcqwOokzqiWtywgGms=,tag:wu7w9em6pxB+JRIk7TxSPg==,type:int]
-    targetPort: ENC[AES256_GCM,data:o1g=,iv:ERWU+oq6j24BVqXmZYFFf9pwOK4s3HtnlEU8CwsonXA=,tag:QVvPI7HMu8oDYDkSqXxMLA==,type:int]
-    nodePort: ENC[AES256_GCM,data:kAYGhBs=,iv:18ddbkVTYy9m2i0ugPGbQPdFez9BR4M8ZaV2MCHFc8U=,tag:XuhYwNWaDxPSQciuSBBF4A==,type:int]
-    appLabel: ENC[AES256_GCM,data:LORJKg5h,iv:Rlt/l4S45vBo2sOPR2xucFBnp+BpDGx8eRQ55EJdzpQ=,tag:0xY50Gp3Jz1Ru/zlsCpcWA==,type:str]
-sops:
-    kms: []
-    gcp_kms:
-        - resource_id: projects/csye7125-project-dev/locations/us-east1/keyRings/sops-key-ring/cryptoKeys/new-sops-key
-          created_at: "2025-03-15T00:22:04Z"
-          enc: CiQABwpIa1SCPHNTg2qnJY2xSQJWVfu+Zb0lYDgUf5XnvwzILJQSSQAiUtAPmQT794+jJz+Hl7BmwtjcH+r06LO8gZX/roAbLfZllovsUUXTIUc0sdDfzhJrkj0LYLQ40Aiv1Ly0ywmYF+LX3crrSrg=
-    azure_kv: []
-    hc_vault: []
-    age: []
-    lastmodified: "2025-03-15T00:22:05Z"
-    mac: ENC[AES256_GCM,data:tv/yHAh/CytaKE7jDjj2AZkzOQyRGm5fm2+XDIu9X/tX6Z6xkqMWYvCpDyU24+0lFfIHDVHx/nAK7bR55uFs9Ir8Kbv+cPlnf/uM7nkitQAQOXkSYrndFj7Igp4yKztelKixrk9i/4QbCIQTh2k8nuHXRbYNzMk/GsvMc4ipdbI=,iv:hVdIPklUbBxM1DJp1C8U/bpWNvzODoVhK5yBSiBNQuQ=,tag:paQ+gHdgxhk6lQLxkWU7bA==,type:str]
-    pgp: []
-    unencrypted_suffix: _unencrypted
-    version: 3.8.1
+    serviceName: webapp-service
+    namespace: api-server
+    serviceType: NodePort
+    servicePort: 80
+    targetPort: 80
+    nodePort: 30000
+    appLabel: webapp

@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-server
-  namespace: api-server
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace.app }}
 spec:
   replicas: {{ .Values.apiServer.replicas }}
   selector:
     matchLabels:
-      app: api-server
+      app:  {{ .Values.appName }}
   template:
     metadata:
       labels:
-        app: api-server
+        app:  {{ .Values.appName }}
     spec:
       initContainers:
         - name: wait-for-postgres
