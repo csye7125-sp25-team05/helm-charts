@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.5.0...v1.6.0) (2025-03-19)
+
+
+### Bug Fixes
+
+* Removing test from README ([c3a68b4](https://github.com/csye7125-sp25-team05/helm-charts/commit/c3a68b4c780d65a887ae67023c4be646583a4253))
+* Update README.md ([a0e2494](https://github.com/csye7125-sp25-team05/helm-charts/commit/a0e2494e60ba6bd3797728550f6fa8f1efb37fd3))
+
+
+### Features
+
+* Updated docker file ([8d9a0d3](https://github.com/csye7125-sp25-team05/helm-charts/commit/8d9a0d3c4bcabe704619d6177ae8e0d7e12bcb2f))
+
 # [1.5.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.4.0...v1.5.0) (2025-03-18)
 
 
