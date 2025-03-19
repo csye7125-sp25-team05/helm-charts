@@ -20,16 +20,16 @@ env:
 secrets:
     gcpCredentials: L1VzZXJzL21heXVyZXNoLnNhdGFvQGdtYWlsLmNvbSIsImF1dGgiOiJiV0Y1ZFhKbElFd3lNVFkyTWpFM09ETTNNalk0T0RrNE1EY3dOelE9In19fQ==
 docker:
-    username: mayu007
-    password: Mayuresh@123
-    email: mayuresh.satao@gmail.com
+    username: bWF5dTAwNw==
+    password: TWF5dXJlc2hAMTIz
+    email: bWF5dXJlc2guc2F0YW9AZ21haWwuY29t
     auth: bWF5dXJlc2guc2F0YW9AZ21haWwuY29tOk1heXVyZXNoQDEyMw==
 apiServer:
     image: mayu007/api-server:t3
     bucketName: csye7125-sp25-05
     projectId: csye7125-project-dev
     replicas: 1
-    flywayImage: sataomayu/api:t1
+    flywayImage: mayu007/api-server-db:t1
     serviceAccountName: api-server-sa
     namespace: api-server
     automountToken: false
@@ -40,11 +40,11 @@ postgres:
     storageSize: 1Gi
     serviceName: postgres-service
 dbsecrets:
-    POSTGRES_DB: api-server
-    POSTGRES_USER: webapp_user
-    POSTGRES_PASSWORD: Mayuresh@123
-    DATABASE_URL: cG9zdGdyZXNxbDovL3dlYmFwcF91c2VyOk1heXVyZXNoQDEyM0Bwb3N0Z3Jlcy1zZXJ2aWNlOjU0MzIvYXBpLXNlcnZlcg==
-postgres-service:
+    POSTGRES_DB: YXBp
+    POSTGRES_USER: d2ViYXBwX3VzZXI=
+    POSTGRES_PASSWORD: TWF5dXJlc2hAMTIz
+    DATABASE_URL: cG9zdGdyZXNxbDovL3dlYmFwcF91c2VyOk1heXVyZXNoQDEyM0Bwb3N0Z3Jlcy1zZXJ2aWNlOjU0MzIvYXBp
+postgresService:
     serviceName: postgres
     port: 5432
     targetPort: 5432
