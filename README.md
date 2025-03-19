@@ -1,5 +1,5 @@
 # helm-charts
-test
+
 This Helm chart deploys an API server and a PostgreSQL database in a Kubernetes cluster, each in separate namespaces (`api-server` and `api-db`), with Network Policies enforcing a "Default Deny" approach and restricted access between components.
 
 ## Overview
