@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.6.0...v1.7.0) (2025-03-19)
+
+
+### Features
+
+* Updated docker file and fixed jenkins pat ([1826933](https://github.com/csye7125-sp25-team05/helm-charts/commit/182693365973cfb1007b6563e5c36b6391fe47a5))
+
 # [1.6.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.5.0...v1.6.0) (2025-03-19)
 
 
