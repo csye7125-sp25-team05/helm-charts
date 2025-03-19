@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.7.0...v1.7.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* Updated readme ([af47820](https://github.com/csye7125-sp25-team05/helm-charts/commit/af47820f5ea4888277e1b765d63444696f9edc1f))
+
 # [1.7.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.6.0...v1.7.0) (2025-03-19)
 
 
