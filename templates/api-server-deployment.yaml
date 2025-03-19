@@ -16,14 +16,14 @@ spec:
       initContainers:
         - name: wait-for-postgres
           image: busybox
-          command: ['sh', '-c', 'until nc -z postgres-service 5432; do echo waiting for postgres; sleep 2; done;']
+          command: ['sh', '-c', 'until nc -z {{ .Values.postgresService.serviceName }}.{{ .Values.namespace.db }}.svc.cluster.local 5432; do echo waiting for postgres; sleep 2; done;']
         - name: flyway-migration
           image: {{ .Values.apiServer.flywayImage }}
           imagePullPolicy: Always
           command: ["flyway", "migrate", "-validateMigrationNaming=true"]
           env:
           - name: FLYWAY_URL
-            value: jdbc:postgresql://postgres-service:5432/api-server
+            value: jdbc:postgresql://{{ .Values.postgresService.serviceName }}.{{ .Values.namespace.db }}.svc.cluster.local:5432/api
           - name: FLYWAY_USER
             valueFrom:
               secretKeyRef:
@@ -44,6 +44,12 @@ spec:
         env:
         - name: ENVIRONMENT
           value: "prod"
+        - name: DB_HOST
+          value: "{{ .Values.postgres.serviceName }}.{{ .Values.namespaces.apiDb }}.svc.cluster.local"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: "api"
         - name: BUCKET_NAME
           value: "{{ .Values.apiServer.bucketName }}"
         - name: PROJECT_ID
