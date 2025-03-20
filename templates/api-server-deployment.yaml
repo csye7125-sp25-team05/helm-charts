@@ -45,7 +45,7 @@ spec:
         - name: ENVIRONMENT
           value: "prod"
         - name: DB_HOST
-          value: "{{ .Values.postgres.serviceName }}.{{ .Values.namespaces.apiDb }}.svc.cluster.local"
+          value: "{{ .Values.postgres.serviceName }}.{{ .Values.namespace.db }}.svc.cluster.local"
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
