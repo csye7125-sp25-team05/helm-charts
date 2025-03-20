@@ -13,7 +13,7 @@ service:
     name: api-server
     port: 8080
 env:
-    ENVIRONMENT: local
+    ENVIRONMENT: prod
     BUCKET_NAME: csye7125-sp25-05
     PROJECT_ID: csye7125-project-dev
     GOOGLE_APPLICATION_CREDENTIALS: /var/secrets/google/credentials.json
@@ -25,7 +25,7 @@ docker:
     email: bWF5dXJlc2guc2F0YW9AZ21haWwuY29t
     auth: bWF5dXJlc2guc2F0YW9AZ21haWwuY29tOk1heXVyZXNoQDEyMw==
 apiServer:
-    image: mayu007/api-server:t3
+    image: mayu007/api-server:t4
     bucketName: csye7125-sp25-05
     projectId: csye7125-project-dev
     replicas: 1
