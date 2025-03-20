@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.7.1...v1.8.0) (2025-03-20)
+
+
+### Features
+
+* added network policy ([21db256](https://github.com/csye7125-sp25-team05/helm-charts/commit/21db256be716da31e370e284b48cd3dc03c93b3d))
+
 ## [1.7.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.7.0...v1.7.1) (2025-03-19)
 
 
