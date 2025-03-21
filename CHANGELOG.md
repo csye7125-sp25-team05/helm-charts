@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.9.1...v1.9.2) (2025-03-21)
+
+
+### Bug Fixes
+
+* Removed templates/.DS_Store ([c64c196](https://github.com/csye7125-sp25-team05/helm-charts/commit/c64c196d013b4a0594f7edd24226eb640ecd4abc))
+
 ## [1.9.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.9.0...v1.9.1) (2025-03-21)
 
 
