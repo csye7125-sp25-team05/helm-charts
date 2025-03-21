@@ -1,65 +1,79 @@
-appName: api-server
+appName: ENC[AES256_GCM,data:aG52mJF/9VTQSg==,iv:QNj/GWDVdf5fi16Dgomgw7dZOfRn6QKRtLeS5Tg7kvs=,tag:6lxCVv3IJaaek6YUgrXreA==,type:str]
 namespace:
-    app: api-server
-    db: api-db
+    app: ENC[AES256_GCM,data:fdCmCOn5qaV8mA==,iv:wK9bR/C2s83JqyP4J6FBza6fQawM5CznwVK1EKwQWeI=,tag:DakGRZ3Gmsduj8woaFyasg==,type:str]
+    db: ENC[AES256_GCM,data:MASMd72f,iv:+fn1gcSGEngX8E3u5pzK0llePcJNaCfDzCbg39GuEpc=,tag:w4w6Ey89wpbuOy2/z1IG5A==,type:str]
 dependency:
-    name: api-server
-replicaCount: 1
+    name: ENC[AES256_GCM,data:Go/y40dTtR41qg==,iv:YuE+rHRtVcPv5r1FVk7N2dh3f/JjDny/+3QCEYcu0hQ=,tag:E6OFzizXmc1aOPW1XtkPKA==,type:str]
+replicaCount: ENC[AES256_GCM,data:rQ==,iv:des6vXG3pXmTRgcVRAXMHY+X1ZAUSXAox58pQrI+Rxo=,tag:3fSc1StPwm/8QaPcabELjg==,type:int]
 image:
-    repository: mayu007/api-server
-    tag: t2
-    pullPolicy: IfNotPresent
+    repository: ENC[AES256_GCM,data:OIO9gj6FV/XBvUTT27LHa5OU,iv:LjHwr6bzTwIhV5OTRc15Onq8PvBdFpvYZgppLvvLCKQ=,tag:RVBOsVDJJt69/41+BGX8qg==,type:str]
+    tag: ENC[AES256_GCM,data:m7Q=,iv:5bgGRs1a0GEbHKqDXE0nBLODQa2RDwPXDTVVqCvLiOk=,tag:9GtrHvD73429K40KJCg4xA==,type:str]
+    pullPolicy: ENC[AES256_GCM,data:L0qiwh8iu2iRU0KT,iv:ghKPh3D1AUJjCzSQUVZWpOxvqR7yooYbDla6trozKVo=,tag:jfzyt7OOQ+ha2p2LE24gIQ==,type:str]
 service:
-    name: api-server
-    port: 8080
+    name: ENC[AES256_GCM,data:UbUiSiiFD98ilg==,iv:x3SO83qiiSQrkJP+3H02KdWBM6CIk4RADBWlwJ70qfw=,tag:YBNEWNKvXzx9YuIcYL6qdA==,type:str]
+    port: ENC[AES256_GCM,data:xYNJjA==,iv:wszh5EOvjyY2g4tnTSaLxAD2fu1Zp9v5WUPD7U9jcUo=,tag:ousbidTZMYdPgHVtABod6w==,type:int]
 env:
-    ENVIRONMENT: prod
-    BUCKET_NAME: csye7125-sp25-05
-    PROJECT_ID: csye7125-project-dev
-    GOOGLE_APPLICATION_CREDENTIALS: /var/secrets/google/credentials.json
+    ENVIRONMENT: ENC[AES256_GCM,data:NOJhhw==,iv:6j2gZJEv7ONG3fcHVwG4/E+QOnT/xW7GsdH+UQW/Tew=,tag:rrlzcTcVw7URE7dYXhIO/Q==,type:str]
+    BUCKET_NAME: ENC[AES256_GCM,data:jdiK9PJkG0B8kkDAwc0tPQ==,iv:fDaiy6B0eow4osT785kY7k+YtiWgWBxiSWMikD3pTK0=,tag:AYa1SfvDAO1U9nfpgGfgvA==,type:str]
+    PROJECT_ID: ENC[AES256_GCM,data:nqif2yOAjIPShaliuRgUDySqEns=,iv:2VQncd+657z29IP6VPGF34M1GQN0CtrHJiDrFvdRclA=,tag:wvpFeEvGoZBRuC0UBqNa6w==,type:str]
+    GOOGLE_APPLICATION_CREDENTIALS: ENC[AES256_GCM,data:ynZoB2gwWYKufxQB5LJ4Dvdn28mc9ukUWkU509Hf85mRa1qb,iv:/Lbyb0qSngrKUGb5hhDVsSJrIAgO2Fcw34dSDO0FvUQ=,tag:r+aXIt1lT3XlYpFXCDSJLw==,type:str]
 secrets:
-    gcpCredentials: L1VzZXJzL21heXVyZXNoLnNhdGFvQGdtYWlsLmNvbSIsImF1dGgiOiJiV0Y1ZFhKbElFd3lNVFkyTWpFM09ETTNNalk0T0RrNE1EY3dOelE9In19fQ==
+    gcpCredentials: ENC[AES256_GCM,data:rgNKbv57j2JlCUVA5TzGs0dkr5uEhvWZCnIURDpxMQ0MWktFASQF1VymgJcO+DXGI0mfPQjGXXOIVxZmXvytcd/sG+dpp7EZs2T5TPFIJhcE4KzBOZq8dRfhQ0zY2NcRSQlH0STv8HXWxJ9hQiEoDN6oqkw=,iv:CDJdPWQ5jf1fqlVTYePM7l4wrM2T5oN8hmDvUQn2HEo=,tag:DwHUPKe4iSzCPc35oD8Myw==,type:str]
 docker:
-    username: bWF5dTAwNw==
-    password: TWF5dXJlc2hAMTIz
-    email: bWF5dXJlc2guc2F0YW9AZ21haWwuY29t
-    auth: bWF5dXJlc2guc2F0YW9AZ21haWwuY29tOk1heXVyZXNoQDEyMw==
+    username: ENC[AES256_GCM,data:TVBZFQaVathqSSt+,iv:IhVscEhgf/J/GeSOqkUezc1Dmo+/o69KEcZsxAEGic4=,tag:1r0fKM45L6eJwOXgpuffKQ==,type:str]
+    password: ENC[AES256_GCM,data:efS91seqFEhYqOB03pz5DA==,iv:kfgc82khletaQks+TrlZnLmrwAEy6Cuqc9es/MWdn+0=,tag:32vGiWPQDvs42yRVnXt6XA==,type:str]
+    email: ENC[AES256_GCM,data:cjVOqF2aFFCsDR3a4ZJSMTyXFuFn9cYBbiPkCRvk2SY=,iv:FnksLjOk1d9A7fz184fT/HyU946qD+tc2yytYvlUV2M=,tag:8v18U1MvzBQjHiQ281s4kQ==,type:str]
+    auth: ENC[AES256_GCM,data:DYCzr5s1hpDOWo2EtPHDyQpKkmXHS3lUMjQklDjDSLVsCezw6bdeZox7Uav5tgmMJiMU/Q==,iv:Euh+zveFpjIlP3z9q1YOo4YV9NXE6cmugMkUgQMIXLs=,tag:yAkdjJi1bfLjaBZZPW0IcA==,type:str]
 apiServer:
-    image: mayu007/api-server:t4
-    bucketName: csye7125-sp25-05
-    projectId: csye7125-project-dev
-    replicas: 1
-    flywayImage: mayu007/api-server-db:t1
-    serviceAccountName: api-server-sa
-    namespace: api-server
-    automountToken: false
+    image: ENC[AES256_GCM,data:7FbyI7dqN2CKjAguhSb9QVzGgkea,iv:LEAe5g7z5f2jpUPPcdGOMMewZi6lnTEUTydSiohWjp0=,tag:HheAc+1i/m19YEmpdxfDCw==,type:str]
+    bucketName: ENC[AES256_GCM,data:MWz08a/L1NeQ/eg6giQaTg==,iv:S2LZZ9Ys4emQcQM3dqmBngR4kHHPMCSQuCFNJApa+To=,tag:pDPotEsunT93jEnb7qmi+A==,type:str]
+    projectId: ENC[AES256_GCM,data:WRA7jA+Yq4ZeFV+U7ruuoU2tpIw=,iv:mhe6bpTePisJ03fL2FWnHsVocbvlFGGgn1kVUs45udA=,tag:JRib0le9KjHtiLXaFO51sQ==,type:str]
+    replicas: ENC[AES256_GCM,data:1g==,iv:fw1L+zUQqcjkcYgcv84A6U0bEqxhtlSm6DFXgV0RIcA=,tag:LSXdtq9XpxfVJyvMzx7vIg==,type:int]
+    flywayImage: ENC[AES256_GCM,data:jE4UIsmndly4xdMyAaudBI9xRaduTvEj,iv:j5DaJ+Nu1zbuasbe9UrzSbhdY5xg+pQQWyubCgerH2E=,tag:vGui+FdQyZsxReJtBulv3g==,type:str]
+    serviceAccountName: ENC[AES256_GCM,data:gVi6m1qCkfoc9cnVMA==,iv:FcYyt9BEMtiEbT3qZajQAHzdtwAGXTwrSEVIxTRPpds=,tag:ek/va5JAChT9WILfRTE9LA==,type:str]
+    namespace: ENC[AES256_GCM,data:HR/TBeC9gSVgOQ==,iv:USByrEubNM78xuZQQDle7XgyhaT/7jJjzUTD+jf3Km4=,tag:HB9InMFzHQxubPYyRbqFHg==,type:str]
+    automountToken: ENC[AES256_GCM,data:plufKx0=,iv:C2pTEzdofPSAkKKeTqZGGQDMtyVCPvxXsSysaqywTXU=,tag:BtUiCq4j+ArdJTRlofDD7A==,type:bool]
 postgres:
-    image: postgres:17
-    replicas: 1
-    storageClass: standard
-    storageSize: 1Gi
-    serviceName: postgres-service
+    image: ENC[AES256_GCM,data:e1AswlEeJazRsOg=,iv:zuunt3fSsToq/28wvvZRs39t5AKKER6Ci2FVB17/38s=,tag:aVGKGmU8M7VkBX7XOoHamw==,type:str]
+    replicas: ENC[AES256_GCM,data:MA==,iv:osHSzd52ohXfBnByD2fiJnwNBEisZLmi3h7YCd7859k=,tag:8R44suN+feG4LfqJo8puxQ==,type:int]
+    storageClass: ENC[AES256_GCM,data:eWj3Icsd0Ew=,iv:aIwMGnnRTSTdhiCvOVMGg1rQzexAFDET2ked0cNmZyc=,tag:BLzhmGgEbC34EWibKED7eA==,type:str]
+    storageSize: ENC[AES256_GCM,data:S/Fu,iv:Yi2tP1yHc/ClPYqPIJhXCRmrzb+Ls0seo5AoBAiNnLg=,tag:bsPM0Yackaq+1EP4yOF6Ow==,type:str]
+    serviceName: ENC[AES256_GCM,data:O4oxJj7Pn6EZqcds0nOqbA==,iv:CuSBX+Q2gRyvRZHoM5iNp1hyWyclXKh/Wc9bzZT2m0c=,tag:jafTzS3qz38mCkvizOh2Dg==,type:str]
 dbsecrets:
-    POSTGRES_DB: YXBp
-    POSTGRES_USER: d2ViYXBwX3VzZXI=
-    POSTGRES_PASSWORD: TWF5dXJlc2hAMTIz
-    DATABASE_URL: cG9zdGdyZXNxbDovL3dlYmFwcF91c2VyOk1heXVyZXNoQDEyM0Bwb3N0Z3Jlcy1zZXJ2aWNlOjU0MzIvYXBp
+    POSTGRES_DB: ENC[AES256_GCM,data:3tFidw==,iv:9yJCEez7tJ0oMCMS2LbeLsL9jRWDTtnYOk/JhhEUloM=,tag:kvXwybcygwEiBMWZAOFMeA==,type:str]
+    POSTGRES_USER: ENC[AES256_GCM,data:f7y3SZUjnjnPAE31Q9O/6A==,iv:isT0R4RvOu+J2TRkRGSdNIwbnkYCn/1TRK+fNKKNHr0=,tag:mM17HnogrNBvY777GpGT9w==,type:str]
+    POSTGRES_PASSWORD: ENC[AES256_GCM,data:RJ4ALdcAbDMavFQ2B36KxA==,iv:1B+LbKu1+fnMPCyR/0+kKfLlBZwwXKvg9aJu8GdsgTc=,tag:b4F3v76ETQdVkfpOt5sZdA==,type:str]
+    DATABASE_URL: ENC[AES256_GCM,data:+XyNbIu9OtOqw/8VxMaW6ImFt2Ux6WFZi66mZl7e+49wSd3e2LSNOoXuwYUKsh/eoQcVUypBNmykEB5SVsXPpJyIRcIAGZVroUwqtg+LuVJUCot/,iv:jE6sheXiYT8EWe+df1gOizgShQZ9oeOTfvBb2EPRsKM=,tag:FU+tKZJUaD710AlSsvWVNA==,type:str]
 postgresService:
-    serviceName: postgres
-    port: 5432
-    targetPort: 5432
-    selectorLabel: postgres
+    serviceName: ENC[AES256_GCM,data:kGtSXwN3o9s=,iv:RhYgrFxe2dvMlJnKJogESVfvNkrSm2k4f1oOQIz4OdM=,tag:Gv5M+FJ5ZRaGMgsaCyIvlg==,type:str]
+    port: ENC[AES256_GCM,data:ngX+Sg==,iv:Q0qbsS4j+oa2N60JH6058mV+yd28rjqkXksL5c7Dflo=,tag:53hB3IJ9HbFGdF1U9KxnnQ==,type:int]
+    targetPort: ENC[AES256_GCM,data:y5KJSg==,iv:sII5oCphoFSJciABoX9JKohRpQPxdejR0b14gyu7Pbo=,tag:ofFa5mq1EGFl1nj8osUU4A==,type:int]
+    selectorLabel: ENC[AES256_GCM,data:EE23ILxf4CM=,iv:Z/2hSF2SQIdB98aGw8R9GPRwjKL7F2lrGA5TMpzoBQA=,tag:UwWJCDXbyiadwAL1DWlBuA==,type:str]
 loadbalancer:
-    serviceName: app-service
-    serviceType: LoadBalancer
-    appLabel: api-server
-    servicePort: 80
-    targetPort: 8080
+    serviceName: ENC[AES256_GCM,data:uvF32zC0n3BKTAQ=,iv:KkgyPXTwKcEuq0N5IDPdHN5K5tDwLKy5/JxpmkoLz5A=,tag:6mDYjYHP+56CtF+giNUUNQ==,type:str]
+    serviceType: ENC[AES256_GCM,data:mlP2S6tDj8u5GsZq,iv:f/jSw5E67ZUvTS4s5WV5z3xVx4ip9b74KUJBCFucgco=,tag:bR+voXrzH101J9GZ8LodLg==,type:str]
+    appLabel: ENC[AES256_GCM,data:sb36fLc3/H5dkg==,iv:ux9o0Q6Ltfo8E63S3la335+aJaJ9+HXaYnwL2eQeEFk=,tag:ZxS3ykcBlOc1xql1WNld7Q==,type:str]
+    servicePort: ENC[AES256_GCM,data:nAg=,iv:LR6YuTrdzJrwY39Z6WM45ecOCJaWsl7DWbXICZcey+I=,tag:vADbBsg9PHRqiX6p7XgXtw==,type:int]
+    targetPort: ENC[AES256_GCM,data:VXvP0Q==,iv:6d0QLDTp4G+LBs03Q45t0LwpuNAfJMDXXmcI3ylidqc=,tag:Tq4JacfBPVFsHaetQqgffQ==,type:int]
 webapp:
-    serviceName: webapp-service
-    namespace: api-server
-    serviceType: NodePort
-    servicePort: 80
-    targetPort: 80
-    nodePort: 30000
-    appLabel: webapp
+    serviceName: ENC[AES256_GCM,data:3ETnEHG+jsdQUiI7668=,iv:Nv7nb15l3cVepUtN7R1ETpnbqZUyvi+/cP+T5j85mMA=,tag:dGW3eimoJ/aACK/+JhnW4Q==,type:str]
+    namespace: ENC[AES256_GCM,data:8fXtXYCqGbUrUw==,iv:3vOakBA6BrnKrkg9h+EPFjVCJ3JPX3L0xB1DW+OTmTI=,tag:Tusz1mS3gztD1PnMKLk1vg==,type:str]
+    serviceType: ENC[AES256_GCM,data:mhNLQk4G1co=,iv:rAZM34wHbdnP1/Jr1a1P+rU/DRJxcrp7RZob2d997q0=,tag:ZJITkbgu1JUja7BMmC5iOQ==,type:str]
+    servicePort: ENC[AES256_GCM,data:wSo=,iv:GIiAxak6Rl8e9eym2jYoDgnTFYpR6XgaXpCJ5yAtS08=,tag:HXdFSVJnAI/BPWEUwkv5LQ==,type:int]
+    targetPort: ENC[AES256_GCM,data:Glk=,iv:9WM1sxQttnvPu4yzRcswxkZdh66+CaswTXLxqRsyYKU=,tag:rlK7jmMJgx56HvvyFbF0UQ==,type:int]
+    nodePort: ENC[AES256_GCM,data:A4bqoX8=,iv:31RhPTyDxcaJDFnQef57RKQ7PGRrQLFvP9ZVYa4iZug=,tag:ZJeBex6FOzrbKi84AKlqmQ==,type:int]
+    appLabel: ENC[AES256_GCM,data:/ddNTeIo,iv:o3CQhtXVjNA7oCKhORl/p3CNKSsS67616grK9ysjZH0=,tag:QJ5XsxEnIbieDrvbEny1Yw==,type:str]
+sops:
+    kms: []
+    gcp_kms:
+        - resource_id: projects/csye7125-project-dev/locations/us-east1/keyRings/sops-key-ring/cryptoKeys/new-sops-key
+          created_at: "2025-03-21T18:21:06Z"
+          enc: CiQABwpIa9N2zcOxK+WIlT+P5+zL4sJRoZj8NFqnJmmH619FV3wSSQAiUtAPk+59ja+ZtrQqnhfvxk6UH+EuYDm4VcrDNnqG1KVlRiWfxDOREM2yUTRT2IWjPhJGBGrxmk0twFksJ3NN7StnFbi/HIA=
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2025-03-21T18:21:07Z"
+    mac: ENC[AES256_GCM,data:AX3Phikg0N7GFPDbRuzu3LU0gjSzO3DO7S/306fspGmww1MOPsngS3ABUiJnpa2QUKxgKiYWhrC/oHqJ+ZNZTjFhY8cpfxVLx0zrg3bS4rOV8SxBYze7fp9I70RZtDUDFAYe2XcydoGZD1FSG7ozS3Qqe7ZPi06ETp8SbA7q3QQ=,iv:LchXJ8H9CN8Th85CZvF3FsE5OZrYL27nntkLSNX2unA=,tag:VFNvUJwCVFyAEbF54xTY9Q==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.8.1
