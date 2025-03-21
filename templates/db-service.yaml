@@ -7,5 +7,5 @@ spec:
   selector:
     app: {{ .Values.postgres-service.selectorLabel }}
   ports:
-    - port: {{ .Values.postgres-service.port }}
+      port: {{ .Values.postgres-service.port }}
       targetPort: {{ .Values.postgres-service.targetPort }}
