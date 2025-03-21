@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.8.2...v1.9.0) (2025-03-21)
+
+
+### Features
+
+* empty commit ([fc76589](https://github.com/csye7125-sp25-team05/helm-charts/commit/fc765899b2e67bbb2e856df87697750c68a87380))
+
 ## [1.8.2](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.8.1...v1.8.2) (2025-03-21)
 
 
