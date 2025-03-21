@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.8.1...v1.8.2) (2025-03-21)
+
+
+### Bug Fixes
+
+* Update README.md ([a3f639f](https://github.com/csye7125-sp25-team05/helm-charts/commit/a3f639f63bc16402458cb3a2c266706886da5415))
+
 ## [1.8.1](https://github.com/csye7125-sp25-team05/helm-charts/compare/v1.8.0...v1.8.1) (2025-03-21)
 
 
