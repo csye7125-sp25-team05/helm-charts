@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.appName }}
-  namespace: {{ .Values.namespace.app }}
+  namespace: {{ .Values.apiServer.namespace }}
 spec:
   replicas: {{ .Values.apiServer.replicas }}
   selector:
@@ -55,7 +55,7 @@ spec:
         - name: ENVIRONMENT
           value: "prod"
         - name: DB_HOST
-          value: "{{ .Values.postgresService.serviceName }}.{{ .Values.namespaces.apiDb }}.svc.cluster.local"
+          value: "{{ .Values.postgresService.serviceName }}.{{ .Values.namespace.db }}.svc.cluster.local"
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
