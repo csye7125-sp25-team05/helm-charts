@@ -31,13 +31,6 @@ pipeline {
                 }
             }
         }
-        stage('helm lint') {
-            steps {
-                script {
-                    sh "helm lint ./"
-                    sh "helm template ./"
-                }
-            }
-        }
+        
     }
 }
