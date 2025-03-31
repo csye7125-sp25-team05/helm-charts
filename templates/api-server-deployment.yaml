@@ -12,9 +12,9 @@ spec:
     metadata:
       labels:
         app:  {{ .Values.appName }}
-        istio.io/rev: {{.Values.istio.revision}}
       annotations:
-        traffic.sidecar.istio.io/excludeOutboundPorts: {{.Values.excludeOutboundPorts}}
+        istio.io/rev: {{.Values.istio.revision}}
+        traffic.sidecar.istio.io/excludeOutboundPorts: "{{.Values.istio.excludeOutboundPorts}}"
     spec:
       initContainers:
         - name: wait-for-postgres
