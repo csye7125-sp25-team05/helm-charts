@@ -31,4 +31,4 @@ spec:
   values:
     global:
       proxy:
-        autoInject: disabled
+        autoInject: enabled
