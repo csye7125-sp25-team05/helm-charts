@@ -8,8 +8,8 @@ spec:
   template:
     metadata:
       annotations:
-        sidecar.istio.io/inject: "true"
-        istio.io/rev: custom  # Replace if not using revisioned injection
+        istio.io/rev: {{.Values.istio.revision}}
+        traffic.sidecar.istio.io/excludeOutboundPorts: "{{.Values.istio.excludeOutboundPorts}}"
     spec:
       restartPolicy: Never
       serviceAccountName: api-server-sa
@@ -43,3 +43,5 @@ spec:
                 secretKeyRef:
                   name: postgres-secrets
                   key: POSTGRES_PASSWORD
+      imagePullSecrets:
+      - name: docker-registry-auth
