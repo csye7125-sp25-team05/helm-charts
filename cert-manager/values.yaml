@@ -1,0 +1,5 @@
+certManager:
+  email: your-email@example.com
+  domain: cyse7125-sp25-05.rocks
+  secretName: api-server-tls
+  certificateName: api-server-cert
