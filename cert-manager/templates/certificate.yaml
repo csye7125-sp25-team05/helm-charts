@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.certManager.certificateName }}
+  namespace: istio-system
+spec:
+  secretName: {{ .Values.certManager.secretName }}
+  duration: 2160h
+  renewBefore: 360h
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: {{ .Values.certManager.domain }}
+  dnsNames:
+    - {{ .Values.certManager.domain }}
