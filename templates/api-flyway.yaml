@@ -26,9 +26,6 @@ spec:
               echo "Running Flyway migration...";
               flyway migrate -validateMigrationNaming=true
 
-              echo "Calling quitquitquit on sidecar...";
-              curl -X POST http://localhost:15000/quitquitquit
-
               echo "Done"
           env:
             - name: FLYWAY_URL
