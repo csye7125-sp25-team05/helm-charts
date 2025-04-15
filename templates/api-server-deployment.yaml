@@ -37,8 +37,8 @@ spec:
               secretKeyRef:
                 name: postgres-secrets
                 key: POSTGRES_PASSWORD
-
       serviceAccountName: api-server-sa
+      automountServiceAccountToken: false
       containers:
       - name: api-server
         image: {{ .Values.apiServer.image }}
